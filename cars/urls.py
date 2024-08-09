@@ -1,8 +1,9 @@
 from django.urls import path
-from . import views
+from .views import CarsViewset
 
 urlpatterns = [
-    path("cars/", views.something),
-    path("cars/<int:id>", views.something),
+    path("cars/", CarsViewset.as_view()),
+    path("cars/<int:id>", CarsViewset.as_view()),
 ]
 
+ 
